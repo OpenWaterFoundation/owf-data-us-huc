@@ -1,0 +1,26 @@
+{
+  "title": "US HUC Basins",
+  "description": "US Hydrologic Unit Code (HUC) basins.",
+  "identifier": "owf-data-us-huc-basins",
+  "landingPage": "https://data.openwaterfoundation.org/country/us/usgs/huc-basins/",
+  "issued": "2022-08-02",
+  "keyword": [
+    "polygon",
+    "basins",
+    "hydrologic unit code",
+    "huc"
+  ],
+  "publisher": {
+    "name": "Open Water Foundation",
+    "mbox": "info@openwaterfoundation.org"
+  },
+  "distribution": [
+    {
+      "accessURL": "",
+      "byteSize": null,
+      "description": "Resource locator",
+      "format": "application/geo+json",
+      "title": "US HUC Basins"
+    }
+  ]
+}
