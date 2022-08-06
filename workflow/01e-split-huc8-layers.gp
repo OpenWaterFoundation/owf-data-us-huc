@@ -292,4 +292,4 @@ WriteGeoLayerToGeoJSON(GeoLayerID="huc8-basins-1810-southern-mojave-salton-sea",
 #
 # HUC8 - Cache La Poudre: 10190007
 ReadGeoLayersFromFGDB(InputFolder="downloads/huc8/wbdhu8_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU8",Query="huc8 = '10190007'",GeoLayerID="huc8-basin-10190007",Name="HUC8 10190007",Description="HUC8 10190007 Cache La Poudre Basin from USGS")
-WriteGeoLayerToGeoJSON(GeoLayerID="huc8-basin-10190007",OutputFile="../data/huc8-basin-1019007-poudre.geojson",OutputPrecision="5")
+WriteGeoLayerToGeoJSON(GeoLayerID="huc8-basin-10190007",OutputFile="../data/huc8-basin-10190007-poudre.geojson",OutputPrecision="5")

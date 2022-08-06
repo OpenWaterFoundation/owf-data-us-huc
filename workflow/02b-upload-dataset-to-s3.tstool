@@ -6,22 +6,30 @@ StartLog(LogFile="results/02b-upload-dataset-to-s3.tstool.log")
 # - InsertsFolder is the location of data.openwaterfoundation.org inserts for the landing page
 SetProperty(PropertyName="InsertsFolder",PropertyType=String,PropertyValue="../../owf-website-data/inserts")
 #
-# Expand the dataset details to use the table that was generated from the script.
+# Expand the dataset details to use the table that was generated from the script:
+# - this must be done before uploading the dataset-details.md file to the cloud
 ReadPropertiesFromFile(InputFile="results\dataset-details-table.md",FileFormat=Value,IncludeProperty="DatasetDownloadsMarkdown")
 TextEdit(InputFile="dataset-details-0.md",SearchFor="INSERT_DOWNLOADS_SECTION",ReplaceWith="${DatasetDownloadsMarkdown}",OutputFile="results/dataset-details.md")
 #
 # Upload the files:
 # - geojson file output by GeoProcessor
 # - dataset metadata files needed for landing page
-AwsS3(S3Command="UploadObjects",Region="us-west-2",Bucket="data.openwaterfoundation.org",UploadFiles="../data/*.geojson:country/us/usgs/huc-basins/*,dataset.json:country/us/usgs/huc-basins/dataset.json,dataset.png:country/us/usgs/huc-basins/dataset.png,results/dataset-details.md:country/us/usgs/huc-basins/dataset-details.md")
+# - the first command processes all the files
+# - uncomment and run specific commands if subsets of files are processed
+# AwsS3(S3Command="UploadObjects",Region="us-west-2",Bucket="data.openwaterfoundation.org",UploadFiles="../data/*.geojson:country/us/usgs/huc-basins/*,dataset.json:country/us/usgs/huc-basins/dataset.json,dataset.png:country/us/usgs/huc-basins/dataset.png,results/dataset-details.md:country/us/usgs/huc-basins/dataset-details.md")
+# AwsS3(S3Command="UploadObjects",Region="us-west-2",Bucket="data.openwaterfoundation.org",UploadFiles="../data/huc10*.geojson:country/us/usgs/huc-basins/*,dataset.json:country/us/usgs/huc-basins/dataset.json,dataset.png:country/us/usgs/huc-basins/dataset.png,results/dataset-details.md:country/us/usgs/huc-basins/dataset-details.md")
+AwsS3(S3Command="UploadObjects",Region="us-west-2",Bucket="data.openwaterfoundation.org",UploadFiles="../data/huc8-basin-10190007-poudre.geojson:country/us/usgs/huc-basins/huc8-basin-10190007-poudre.geojson,dataset.json:country/us/usgs/huc-basins/dataset.json,dataset.png:country/us/usgs/huc-basins/dataset.png,results/dataset-details.md:country/us/usgs/huc-basins/dataset-details.md")
 #
-# Invalidate so that files are available on the CDN as soon as possible.
-# AwsCloudFront(CloudFrontCommand="ListDistributions",Region="aws-global",Comment="*data.openwaterfoundation.org*",OutputTableID="Distributions")
-AwsCloudFront(CloudFrontCommand="InvalidateDistribution",Region="aws-global",Comment="*data.openwaterfoundation.org*",InvalidationPaths="/country/us/usgs/huc-basins/*")
+# Invalidate so that files are available on the CDN as soon as possible:
+# - the first command processes all the files
+# - uncomment and run specific commands if subsets of files are processed
+# AwsCloudFront(CloudFrontCommand="InvalidateDistribution",Region="aws-global",Comment="*data.openwaterfoundation.org*",InvalidationPaths="/country/us/usgs/huc-basins/*")
+# AwsCloudFront(CloudFrontCommand="InvalidateDistribution",Region="aws-global",Comment="*data.openwaterfoundation.org*",InvalidationPaths="/country/us/usgs/huc-basins/huc10*")
+AwsCloudFront(CloudFrontCommand="InvalidateDistribution",Region="aws-global",Comment="*data.openwaterfoundation.org*",InvalidationPaths="/country/us/usgs/huc-basins/huc8-basin-10190007-poudre.geojson,/country/us/usgs/huc-basins/dataset*")
 #
 # Create the dataset catalog with landing page:
 # - also list invalidations to see what is in process
-AwsS3Catalog(Region="us-west-2",Bucket="data.openwaterfoundation.org",StartingPrefix="state/co/dwr/huc-basins/",DistributionId="*data.openwaterfoundation.org*",DatasetIndexFile="results/dataset-index.html",DatasetIndexHeadFile="${InsertsFolder}/head-insert.html",DatasetIndexBodyFile="${InsertsFolder}/body-nav-insert.html",DatasetIndexFooterFile="${InsertsFolder}/footer-insert.html",UploadDatasetFiles=True,OutputTableID="Datasets",KeepFiles=True)
+AwsS3Catalog(Region="us-west-2",Bucket="data.openwaterfoundation.org",StartingPrefix="country/us/usgs/huc-basins/",DistributionId="*data.openwaterfoundation.org*",DatasetIndexFile="results/dataset-index.html",DatasetIndexHeadFile="${InsertsFolder}/head-insert.html",DatasetIndexBodyFile="${InsertsFolder}/body-nav-insert.html",DatasetIndexFooterFile="${InsertsFolder}/footer-insert.html",UploadDatasetFiles=True,OutputTableID="Datasets",KeepFiles=True)
 # AwsCloudFront(CloudFrontCommand="ListInvalidations",Region="af-south-1",OutputTableID="InvalidationList")
 # Compare the local and S3 file to see how long it takes to be avaialable on S3.
 CompareFiles(InputFile1="results/dataset-index.html",InputFile2="https://s3.us-west-2.amazonaws.com/data.openwaterfoundation.org/country/us/usgs/huc-basins/index.html",IfDifferent=Warn,WaitUntil=FilesAreSame,WaitTimeout=600000,WaitInterval=60000)
