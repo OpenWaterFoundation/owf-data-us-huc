@@ -10,6 +10,9 @@ The dataset files are also published on
 [`data.openwaterfoundation.org`](https://data.openwaterfoundation.org)
 and are used in data analyses and web applications.
 
+For recent work, the September 2021 files were downloaded by following links on the above pages:
+[https://nrcs.app.box.com/v/huc/folder/39290322977](https://nrcs.app.box.com/v/huc/folder/39290322977).
+
 The following sections provide a summary of the repository:
 
 * [Repository Contents](#repository-contents)
