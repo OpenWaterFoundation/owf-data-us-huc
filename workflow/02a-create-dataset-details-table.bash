@@ -18,7 +18,7 @@ The following files can be downloaded or used directly.
 * Files are organized from largest basin to smallest.
 * For smaller basin size, multiple basins are grouped within a larger basin,
   for example a file named for a HUC4 basin will contain all HUC8 basins in the HUC4 basin.
-* Individual basins are available for specific basins.
+* Files containing individual basins are available for some specific basins.
 
 More combinations and basins can be added upon request.
 Currently, only basins that are of interest to the Open Water Foundation have been added." > ${tableFile}
@@ -67,7 +67,7 @@ done
 # ----------------------------------
 
 echo "
-### HUC8 Basins ###
+### HUC8 Basins (for each HUC4 basin) ###
 
 Files are available containing all the HUC8 basins in a HUC4 basin.
 
@@ -81,8 +81,9 @@ ls -1 ../data/huc8-basins-* | while read filepath; do
 done
 
 echo "
+### HUC8 Basins (for selected HUC8 basins) ###
 
-Files are available for individual HUC8 basins.
+Files are available for the following selected HUC8 basins.
 
 | **Layer File (HUC8 basin)** | **Size (bytes)** | **View** |
 |--|--:|--|" >> ${tableFile}
@@ -98,11 +99,11 @@ done
 # ----------------------------------
 
 echo "
-### HUC10 Basins ###
+### HUC10 Basins (for selected HUC8 basins) ###
 " >> ${tableFile}
 
 echo "
-Files are available containing all the HUC10 basins in a HUC8 basin.
+Files are available containing all the HUC10 basins in the following selected HUC8 basins.
 
 | **Layer File (HUC10 basins in HUC8)** | **Size (bytes)** | **View** |
 |--|--:|--|" >> ${tableFile}
@@ -118,7 +119,7 @@ done
 # ----------------------------------
 
 echo "
-### HUC12 Basins ###
+### HUC12 Basins (for each HUC4 basin) ###
 
 Files are available containing all the HUC12 basins in a HUC4 basin.
 
@@ -132,7 +133,9 @@ ls -1 ../data/huc12-basins-[0-9][0-9][0-9][0-9]-* | while read filepath; do
 done
 
 echo "
-Files are available containing all the HUC12 basins in a HUC8 basin.
+### HUC12 Basins (for selected HUC8 basins) ###
+
+Files are available containing all the HUC12 basins in the following selected HUC8 basins.
 
 | **Layer File (HUC12 basins in HUC8)** | **Size (bytes)** | **View** |
 |--|--:|--|" >> ${tableFile}
@@ -145,4 +148,5 @@ done
 
 echo ""
 echo "The output file is:  ${tableFile}"
+echo "Run the following in TSTool to upload to AWS S3:  02b-upload-dataset-to-s3.tstool"
 echo ""

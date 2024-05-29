@@ -290,6 +290,74 @@ WriteGeoLayerToGeoJSON(GeoLayerID="huc8-basins-1810-southern-mojave-salton-sea",
 #
 #======================= HUC8 - individual basins =============================
 #
+# HUC8 - South Platte Headwaters: 10190001
+ReadGeoLayersFromFGDB(InputFolder="downloads/huc8/wbdhu8_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU8",Query="huc8 = '10190001'",GeoLayerID="huc8-basin-10190001",Name="HUC8 10190001",Description="HUC8 10190001 South Platte Headwaters Basin from USGS")
+WriteGeoLayerToGeoJSON(GeoLayerID="huc8-basin-10190001",OutputFile="../data/huc8-basin-10190001-south-platte-headwaters.geojson",OutputPrecision="5")
+#
+# HUC8 - Upper South Platte: 10190002
+ReadGeoLayersFromFGDB(InputFolder="downloads/huc8/wbdhu8_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU8",Query="huc8 = '10190002'",GeoLayerID="huc8-basin-10190002",Name="HUC8 10190002",Description="HUC8 10190002 Upper South Platte Basin from USGS")
+WriteGeoLayerToGeoJSON(GeoLayerID="huc8-basin-10190002",OutputFile="../data/huc8-basin-10190002-upper-south-platte.geojson",OutputPrecision="5")
+#
+# HUC8 - Middle South Platte - Cherry Creek: 10190003
+ReadGeoLayersFromFGDB(InputFolder="downloads/huc8/wbdhu8_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU8",Query="huc8 = '10190003'",GeoLayerID="huc8-basin-10190003",Name="HUC8 10190003",Description="HUC8 10190003 Cherry Creek Basin from USGS")
+WriteGeoLayerToGeoJSON(GeoLayerID="huc8-basin-10190003",OutputFile="../data/huc8-basin-10190003-cherry.geojson",OutputPrecision="5")
+#
+# HUC8 - Clear: 10190004
+ReadGeoLayersFromFGDB(InputFolder="downloads/huc8/wbdhu8_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU8",Query="huc8 = '10190004'",GeoLayerID="huc8-basin-10190004",Name="HUC8 10190004",Description="HUC8 10190004 Clear Basin from USGS")
+WriteGeoLayerToGeoJSON(GeoLayerID="huc8-basin-10190004",OutputFile="../data/huc8-basin-10190004-clear.geojson",OutputPrecision="5")
+#
+# HUC8 - Saint Vrain: 10190005
+ReadGeoLayersFromFGDB(InputFolder="downloads/huc8/wbdhu8_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU8",Query="huc8 = '10190005'",GeoLayerID="huc8-basin-10190005",Name="HUC8 10190005",Description="HUC8 10190005 Saint Vrain Basin from USGS")
+WriteGeoLayerToGeoJSON(GeoLayerID="huc8-basin-10190005",OutputFile="../data/huc8-basin-10190005-saint-vrain.geojson",OutputPrecision="5")
+#
+# HUC8 - Big Thompson: 10190006
+ReadGeoLayersFromFGDB(InputFolder="downloads/huc8/wbdhu8_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU8",Query="huc8 = '10190006'",GeoLayerID="huc8-basin-10190006",Name="HUC8 10190006",Description="HUC8 10190006 Big Thompson Basin from USGS")
+WriteGeoLayerToGeoJSON(GeoLayerID="huc8-basin-10190006",OutputFile="../data/huc8-basin-10190006-big-thompson.geojson",OutputPrecision="5")
+#
 # HUC8 - Cache La Poudre: 10190007
 ReadGeoLayersFromFGDB(InputFolder="downloads/huc8/wbdhu8_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU8",Query="huc8 = '10190007'",GeoLayerID="huc8-basin-10190007",Name="HUC8 10190007",Description="HUC8 10190007 Cache La Poudre Basin from USGS")
 WriteGeoLayerToGeoJSON(GeoLayerID="huc8-basin-10190007",OutputFile="../data/huc8-basin-10190007-poudre.geojson",OutputPrecision="5")
+#
+# HUC8 - Lone Tree - Owl: 10190008
+ReadGeoLayersFromFGDB(InputFolder="downloads/huc8/wbdhu8_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU8",Query="huc8 = '10190008'",GeoLayerID="huc8-basin-10190008",Name="HUC8 10190008",Description="HUC8 10190008 Lone Tree-Owl Basin from USGS")
+WriteGeoLayerToGeoJSON(GeoLayerID="huc8-basin-10190008",OutputFile="../data/huc8-basin-10190008-lone-tree-owl.geojson",OutputPrecision="5")
+#
+# HUC8 - Crow: 10190009
+ReadGeoLayersFromFGDB(InputFolder="downloads/huc8/wbdhu8_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU8",Query="huc8 = '10190009'",GeoLayerID="huc8-basin-10190009",Name="HUC8 10190009",Description="HUC8 10190009 Crow Basin from USGS")
+WriteGeoLayerToGeoJSON(GeoLayerID="huc8-basin-10190009",OutputFile="../data/huc8-basin-10190009-crow.geojson",OutputPrecision="5")
+#
+# HUC8 - Kiowa: 10190010
+ReadGeoLayersFromFGDB(InputFolder="downloads/huc8/wbdhu8_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU8",Query="huc8 = '10190010'",GeoLayerID="huc8-basin-10190010",Name="HUC8 10190010",Description="HUC8 10190010 Kiowa Basin from USGS")
+WriteGeoLayerToGeoJSON(GeoLayerID="huc8-basin-10190010",OutputFile="../data/huc8-basin-10190010-kiowa.geojson",OutputPrecision="5")
+#
+# HUC8 - Bijou: 10190011
+ReadGeoLayersFromFGDB(InputFolder="downloads/huc8/wbdhu8_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU8",Query="huc8 = '10190011'",GeoLayerID="huc8-basin-10190011",Name="HUC8 10190011",Description="HUC8 10190011 Bijou Basin from USGS")
+WriteGeoLayerToGeoJSON(GeoLayerID="huc8-basin-10190011",OutputFile="../data/huc8-basin-10190011-bijou.geojson",OutputPrecision="5")
+#
+# HUC8 - Middle South Platte - Sterling: 10190012
+ReadGeoLayersFromFGDB(InputFolder="downloads/huc8/wbdhu8_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU8",Query="huc8 = '10190012'",GeoLayerID="huc8-basin-10190012",Name="HUC8 10190012",Description="HUC8 10190012 Sterling Basin from USGS")
+WriteGeoLayerToGeoJSON(GeoLayerID="huc8-basin-10190012",OutputFile="../data/huc8-basin-10190012-sterling.geojson",OutputPrecision="5")
+#
+# HUC8 - Beaver: 10190013
+ReadGeoLayersFromFGDB(InputFolder="downloads/huc8/wbdhu8_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU8",Query="huc8 = '10190013'",GeoLayerID="huc8-basin-10190013",Name="HUC8 10190013",Description="HUC8 10190013 Beaver Basin from USGS")
+WriteGeoLayerToGeoJSON(GeoLayerID="huc8-basin-10190013",OutputFile="../data/huc8-basin-10190013-beaver.geojson",OutputPrecision="5")
+#
+# HUC8 - Pawnee: 10190014
+ReadGeoLayersFromFGDB(InputFolder="downloads/huc8/wbdhu8_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU8",Query="huc8 = '10190014'",GeoLayerID="huc8-basin-10190014",Name="HUC8 10190014",Description="HUC8 10190014 Pawnee Basin from USGS")
+WriteGeoLayerToGeoJSON(GeoLayerID="huc8-basin-10190014",OutputFile="../data/huc8-basin-10190014-pawnee.geojson",OutputPrecision="5")
+#
+# HUC8 - Upper Lodgepole: 10190015
+ReadGeoLayersFromFGDB(InputFolder="downloads/huc8/wbdhu8_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU8",Query="huc8 = '10190015'",GeoLayerID="huc8-basin-10190015",Name="HUC8 10190015",Description="HUC8 10190015 Upper Lodgepole Basin from USGS")
+WriteGeoLayerToGeoJSON(GeoLayerID="huc8-basin-10190015",OutputFile="../data/huc8-basin-10190015-upper-lodgepole.geojson",OutputPrecision="5")
+#
+# HUC8 - Lower Lodgepole: 10190016
+ReadGeoLayersFromFGDB(InputFolder="downloads/huc8/wbdhu8_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU8",Query="huc8 = '10190016'",GeoLayerID="huc8-basin-10190016",Name="HUC8 10190016",Description="HUC8 10190016 Lower Lodgepole Basin from USGS")
+WriteGeoLayerToGeoJSON(GeoLayerID="huc8-basin-10190016",OutputFile="../data/huc8-basin-10190016-lower-lodgepole.geojson",OutputPrecision="5")
+#
+# HUC8 - Sidney Draw: 10190017
+ReadGeoLayersFromFGDB(InputFolder="downloads/huc8/wbdhu8_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU8",Query="huc8 = '10190017'",GeoLayerID="huc8-basin-10190017",Name="HUC8 10190017",Description="HUC8 10190017 Sidney Draw Basin from USGS")
+WriteGeoLayerToGeoJSON(GeoLayerID="huc8-basin-10190017",OutputFile="../data/huc8-basin-10190017-sidney-draw.geojson",OutputPrecision="5")
+#
+# HUC8 - Lower South Platte: 10190018
+ReadGeoLayersFromFGDB(InputFolder="downloads/huc8/wbdhu8_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU8",Query="huc8 = '10190018'",GeoLayerID="huc8-basin-10190018",Name="HUC8 10190018",Description="HUC8 10190018 Lower South Platte Basin from USGS")
+WriteGeoLayerToGeoJSON(GeoLayerID="huc8-basin-10190018",OutputFile="../data/huc8-basin-10190018-lower-south-platte.geojson",OutputPrecision="5")
