@@ -291,6 +291,74 @@ WriteGeoLayerToGeoJSON(GeoLayerID="huc12-basins-1810-southern-mojave-salton-sea"
 #
 #======================= HUC12 basins within a HUC8 =============================
 #
+# HUC12 - South Platte Headwaters: 10190001xxxx
+ReadGeoLayersFromFGDB(InputFolder="downloads/huc12/wbdhu12_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU12",Query="HUC12 LIKE '10190001%'",GeoLayerID="huc12-basins-10190001-south-platte-headwaters",Name="HUC12 10190001",Description="HUC12 10190001xxxx South Platte Headwaters Basin from USGS")
+WriteGeoLayerToGeoJSON(GeoLayerID="huc12-basins-10190001-south-platte-headwaters",OutputFile="../data/huc12-basins-10190001-south-platte-headwaters.geojson",OutputPrecision="5")
+#
+# HUC12 - Upper South Platte: 10190002xxxx
+ReadGeoLayersFromFGDB(InputFolder="downloads/huc12/wbdhu12_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU12",Query="HUC12 LIKE '10190002%'",GeoLayerID="huc12-basins-10190002-upper-south-platte",Name="HUC12 10190002",Description="HUC12 10190002xxxx Upper South Platte Basin from USGS")
+WriteGeoLayerToGeoJSON(GeoLayerID="huc12-basins-10190002-upper-south-platte",OutputFile="../data/huc12-basins-10190002-upper-south-platte.geojson",OutputPrecision="5")
+#
+# HUC12 - Middle South Platte - Cherry Creek: 10190003xxxx
+ReadGeoLayersFromFGDB(InputFolder="downloads/huc12/wbdhu12_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU12",Query="HUC12 LIKE '10190003%'",GeoLayerID="huc12-basins-10190003-cherry",Name="HUC12 10190003",Description="HUC12 10190003xxxx Cherry Creek Basin from USGS")
+WriteGeoLayerToGeoJSON(GeoLayerID="huc12-basins-10190003-cherry",OutputFile="../data/huc12-basins-10190003-cherry.geojson",OutputPrecision="5")
+#
+# HUC12 - Clear: 10190004xxxx
+ReadGeoLayersFromFGDB(InputFolder="downloads/huc12/wbdhu12_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU12",Query="HUC12 LIKE '10190004%'",GeoLayerID="huc12-basins-10190004-clear",Name="HUC12 10190004",Description="HUC12 10190004xxxx Clear Basin from USGS")
+WriteGeoLayerToGeoJSON(GeoLayerID="huc12-basins-10190004-clear",OutputFile="../data/huc12-basins-10190004-clear.geojson",OutputPrecision="5")
+#
+# HUC12 - Saint Vrain: 10190005xxxx
+ReadGeoLayersFromFGDB(InputFolder="downloads/huc12/wbdhu12_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU12",Query="HUC12 LIKE '10190005%'",GeoLayerID="huc12-basins-10190005-saint-vrain",Name="HUC12 10190005",Description="HUC12 10190005xxxx Saint Vrain Basin from USGS")
+WriteGeoLayerToGeoJSON(GeoLayerID="huc12-basins-10190005-saint-vrain",OutputFile="../data/huc12-basins-10190005-saint-vrain.geojson",OutputPrecision="5")
+#
+# HUC12 - Big Thompson: 10190006xxxx
+ReadGeoLayersFromFGDB(InputFolder="downloads/huc12/wbdhu12_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU12",Query="HUC12 LIKE '10190006%'",GeoLayerID="huc12-basins-10190006-big-thompson",Name="HUC12 10190006",Description="HUC12 10190006xxxx Big Thompson Basin from USGS")
+WriteGeoLayerToGeoJSON(GeoLayerID="huc12-basins-10190006-big-thompson",OutputFile="../data/huc12-basins-10190006-big-thompson.geojson",OutputPrecision="5")
+#
 # HUC12 - Cache La Poudre: 10190007xxxx
 ReadGeoLayersFromFGDB(InputFolder="downloads/huc12/wbdhu12_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU12",Query="HUC12 LIKE '10190007%'",GeoLayerID="huc12-basins-10190007-poudre",Name="HUC12 10190007xxxx",Description="HUC12 10190007xxxx Cache La Poudre Basins from USGS")
 WriteGeoLayerToGeoJSON(GeoLayerID="huc12-basins-10190007-poudre",OutputFile="../data/huc12-basins-10190007-poudre.geojson",OutputPrecision="5")
+#
+# HUC12 - Lone Tree - Owl: 10190008xxxx
+ReadGeoLayersFromFGDB(InputFolder="downloads/huc12/wbdhu12_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU12",Query="HUC12 LIKE '10190008%'",GeoLayerID="huc12-basins-10190008-lone-tree-owl",Name="HUC12 10190008xxxx",Description="HUC12 10190008xxxx Lone Tree-Owl Basin from USGS")
+WriteGeoLayerToGeoJSON(GeoLayerID="huc12-basins-10190008-lone-tree-owl",OutputFile="../data/huc12-basins-10190008-lone-tree-owl.geojson",OutputPrecision="5")
+#
+# HUC12 - Crow: 10190009xxxx
+ReadGeoLayersFromFGDB(InputFolder="downloads/huc12/wbdhu12_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU12",Query="HUC12 LIKE '10190009%'",GeoLayerID="huc12-basins-10190009-crow",Name="HUC12 10190009xxxx",Description="HUC12 10190009xxxx Crow Basin from USGS")
+WriteGeoLayerToGeoJSON(GeoLayerID="huc12-basins-10190009-crow",OutputFile="../data/huc12-basins-10190009-crow.geojson",OutputPrecision="5")
+#
+# HUC12 - Kiowa: 10190010xxxx
+ReadGeoLayersFromFGDB(InputFolder="downloads/huc12/wbdhu12_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU12",Query="HUC12 LIKE '10190010%'",GeoLayerID="huc12-basins-10190010-kiowa",Name="HUC12 10190010xxxx",Description="HUC12 10190010xxxx Kiowa Basin from USGS")
+WriteGeoLayerToGeoJSON(GeoLayerID="huc12-basins-10190010-kiowa",OutputFile="../data/huc12-basins-10190010-kiowa.geojson",OutputPrecision="5")
+#
+# HUC12 - Bijou: 10190011xxxx
+ReadGeoLayersFromFGDB(InputFolder="downloads/huc12/wbdhu12_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU12",Query="HUC12 LIKE '10190011%'",GeoLayerID="huc12-basins-10190011-bijou",Name="HUC12 10190011xxxx",Description="HUC12 10190011xxxx Bijou Basin from USGS")
+WriteGeoLayerToGeoJSON(GeoLayerID="huc12-basins-10190011-bijou",OutputFile="../data/huc12-basins-10190011-bijou.geojson",OutputPrecision="5")
+#
+# HUC12 - Middle South Platte - Sterling: 10190012xxxx
+ReadGeoLayersFromFGDB(InputFolder="downloads/huc12/wbdhu12_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU12",Query="HUC12 LIKE '10190012%'",GeoLayerID="huc12-basins-10190012-sterling",Name="HUC12 10190012xxxx",Description="HUC12 10190012xxxx Sterling Basin from USGS")
+WriteGeoLayerToGeoJSON(GeoLayerID="huc12-basins-10190012-sterling",OutputFile="../data/huc12-basins-10190012-sterling.geojson",OutputPrecision="5")
+#
+# HUC12 - Beaver: 10190013xxxx
+ReadGeoLayersFromFGDB(InputFolder="downloads/huc12/wbdhu12_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU12",Query="HUC12 LIKE '10190013%'",GeoLayerID="huc12-basins-10190013-beaver",Name="HUC12 10190013xxxx",Description="HUC12 10190013xxxx Beaver Basin from USGS")
+WriteGeoLayerToGeoJSON(GeoLayerID="huc12-basins-10190013-beaver",OutputFile="../data/huc12-basins-10190013-beaver.geojson",OutputPrecision="5")
+#
+# HUC12 - Pawnee: 10190014xxxx
+ReadGeoLayersFromFGDB(InputFolder="downloads/huc12/wbdhu12_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU12",Query="HUC12 LIKE '10190014%'",GeoLayerID="huc12-basins-10190014-pawnee",Name="HUC12 10190014xxxx",Description="HUC12 10190014xxxx Pawnee Basin from USGS")
+WriteGeoLayerToGeoJSON(GeoLayerID="huc12-basins-10190014-pawnee",OutputFile="../data/huc12-basins-10190014-pawnee.geojson",OutputPrecision="5")
+#
+# HUC12 - Upper Lodgepole: 10190015xxxx
+ReadGeoLayersFromFGDB(InputFolder="downloads/huc12/wbdhu12_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU12",Query="HUC12 LIKE '10190015%'",GeoLayerID="huc12-basins-10190015-upper-lodgepole",Name="HUC12 10190015xxxx",Description="HUC12 10190015xxxx Upper Lodgepole Basin from USGS")
+WriteGeoLayerToGeoJSON(GeoLayerID="huc12-basins-10190015-upper-lodgepole",OutputFile="../data/huc12-basins-10190015-upper-lodgepole.geojson",OutputPrecision="5")
+#
+# HUC12 - Lower Lodgepole: 10190016xxxx
+ReadGeoLayersFromFGDB(InputFolder="downloads/huc12/wbdhu12_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU12",Query="HUC12 LIKE '10190016%'",GeoLayerID="huc12-basins-10190016-lower-lodgepole",Name="HUC12 10190016xxxx",Description="HUC12 10190016xxxx Lower Lodgepole Basin from USGS")
+WriteGeoLayerToGeoJSON(GeoLayerID="huc12-basins-10190016-lower-lodgepole",OutputFile="../data/huc12-basins-10190016-lower-lodgepole.geojson",OutputPrecision="5")
+#
+# HUC12 - Sidney Draw: 10190017xxxx
+ReadGeoLayersFromFGDB(InputFolder="downloads/huc12/wbdhu12_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU12",Query="HUC12 LIKE '10190017%'",GeoLayerID="huc12-basins-10190017-sidney-draw",Name="HUC12 10190017xxxx",Description="HUC12 10190017xxxx Sidney Draw Basin from USGS")
+WriteGeoLayerToGeoJSON(GeoLayerID="huc12-basins-10190017-sidney-draw",OutputFile="../data/huc12-basins-10190017-sidney-draw.geojson",OutputPrecision="5")
+#
+# HUC12 - Lower South Platte: 10190018xxxx
+ReadGeoLayersFromFGDB(InputFolder="downloads/huc12/wbdhu12_a_us_september2021.gdb",ReadOnlyOneFeatureClass="TRUE",FeatureClass="WBDHU12",Query="HUC12 LIKE '10190018%'",GeoLayerID="huc12-basins-10190018-lower-south-platte",Name="HUC12 10190018xxxx",Description="HUC12 10190018xxxx Lower South Platte Basin from USGS")
+WriteGeoLayerToGeoJSON(GeoLayerID="huc12-basins-10190018-lower-south-platte",OutputFile="../data/huc12-basins-10190018-lower-south-platte.geojson",OutputPrecision="5")
